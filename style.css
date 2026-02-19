@@ -260,6 +260,62 @@ body {
 .section-cloud .section-title { color: var(--deep-sky); }
 .section-cloud .section-divider { background: var(--sky-blue); }
 
+/* ============ REVIEWS ============ */
+.reviews-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 48px; gap: 32px;
+}
+.reviews-header .section-sub { margin-bottom: 0; }
+.reviews-badge {
+  text-align: center; flex-shrink: 0;
+  background: var(--pure-white); border: 1px solid #E0E8EF;
+  border-radius: var(--radius-lg); padding: 20px 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.reviews-badge-stars { font-size: 1.4rem; color: #FBBC04; letter-spacing: 2px; }
+.reviews-badge-score { font-size: 2.4rem; font-weight: 800; color: var(--deep-sky); line-height: 1.1; }
+.reviews-badge-count { font-size: 0.78rem; color: #5A7A94; margin-top: 2px; }
+
+.reviews-scroll-wrapper {
+  overflow: hidden; width: 100%; padding: 8px 0 24px;
+}
+.reviews-scroll-track {
+  display: flex; gap: 20px; width: max-content;
+  animation: reviewsScroll 60s linear infinite;
+}
+.reviews-scroll-track:hover { animation-play-state: paused; }
+
+@keyframes reviewsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.review-card {
+  flex-shrink: 0; width: 340px;
+  background: var(--pure-white); border: 1px solid #E0E8EF;
+  border-radius: var(--radius-lg); padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.review-card:hover {
+  box-shadow: 0 8px 28px rgba(21,101,160,0.12);
+  transform: translateY(-2px);
+}
+.review-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.review-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 0.78rem; font-weight: 700; flex-shrink: 0;
+}
+.review-name { font-size: 0.9rem; font-weight: 700; color: var(--deep-sky); }
+.review-date { font-size: 0.75rem; color: #8FAABE; }
+.review-stars { color: #FBBC04; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; }
+.review-card p {
+  font-size: 0.85rem; line-height: 1.7; color: #5A7A94; margin: 0;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ============ BUTTONS ============ */
 .btn {
   display: inline-block; padding: 14px 32px; border-radius: 8px;
