@@ -212,22 +212,6 @@ body {
   will-change: transform;
 }
 
-.hero-scroll {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px;
-}
-.hero-scroll span {
-  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-  color: rgba(255,255,255,0.4);
-}
-.scroll-line {
-  width: 1px; height: 40px; background: rgba(255,255,255,0.3);
-  animation: scrollPulse 2s infinite;
-}
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; height: 40px; }
-  50% { opacity: 0.8; height: 50px; }
-}
 
 /* ============ SECTIONS ============ */
 .section { padding: 100px 0; }
