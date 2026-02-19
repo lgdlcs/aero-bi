@@ -173,9 +173,11 @@ body {
 }
 .paraglider svg { width: 100%; height: 100%; }
 
-.paraglider-1 { width: 80px; top: 22%; right: 18%; animation: float1 6s ease-in-out infinite; }
-.paraglider-2 { width: 50px; top: 32%; right: 30%; animation: float2 8s ease-in-out infinite; opacity: 0.7; }
-.paraglider-3 { width: 35px; top: 18%; right: 42%; animation: float3 10s ease-in-out infinite; opacity: 0.45; }
+.paraglider-1 { width: 140px; top: 18%; right: 14%; animation: float1 6s ease-in-out infinite; }
+.paraglider-2 { width: 90px; top: 28%; right: 32%; animation: float2 8s ease-in-out infinite; opacity: 0.7; }
+.paraglider-3 { width: 55px; top: 14%; right: 50%; animation: float3 10s ease-in-out infinite; opacity: 0.45; }
+.paraglider-4 { width: 110px; top: 35%; right: 8%; animation: float2 7s ease-in-out infinite 1s; opacity: 0.65; }
+.paraglider-5 { width: 40px; top: 10%; right: 60%; animation: float3 12s ease-in-out infinite; opacity: 0.35; }
 
 @keyframes float1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -191,6 +193,19 @@ body {
 @keyframes float3 {
   0%, 100% { transform: translate(0, 0); }
   50% { transform: translate(12px, -6px); }
+}
+
+/* Mountains */
+.hero-mountains {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  line-height: 0;
+}
+.hero-mountains svg { width: 100%; height: auto; display: block; }
+
+/* Paraglider cursor follow */
+.paraglider {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
 .hero-scroll {
