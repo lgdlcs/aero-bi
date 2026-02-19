@@ -126,82 +126,59 @@
     <div class="hero-mountains">
       <svg viewBox="0 0 1440 480" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Back range gradient — pale purple/blue -->
           <linearGradient id="mtn-back" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#8B9DC3" stop-opacity="0.5"/>
             <stop offset="100%" stop-color="#A8B8D8" stop-opacity="0.3"/>
           </linearGradient>
-          <!-- Mid range gradient — slate blue -->
           <linearGradient id="mtn-mid" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#4A6FA5"/>
             <stop offset="100%" stop-color="#5C7FB5"/>
           </linearGradient>
-          <!-- Front-mid range — darker teal blue -->
           <linearGradient id="mtn-front-mid" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#2D5F8A"/>
             <stop offset="100%" stop-color="#3A6B94"/>
           </linearGradient>
-          <!-- Front range — deep dark -->
-          <linearGradient id="mtn-front" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1A3A5C"/>
-            <stop offset="100%" stop-color="#0E2D4A"/>
-          </linearGradient>
-          <!-- Treeline gradient -->
           <linearGradient id="trees-grad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#1B4332"/>
             <stop offset="100%" stop-color="#0B2A4A"/>
           </linearGradient>
         </defs>
 
-        <!-- Layer 1: Far back range — soft, hazy -->
-        <path d="M0 340 L60 300 L140 320 L240 250 L340 290 L420 230 L520 260 L600 200 L680 240 L760 180 L860 220 L940 170 L1040 210 L1120 175 L1200 230 L1300 195 L1380 250 L1440 220 L1440 480 L0 480Z" fill="url(#mtn-back)"/>
+        <!-- Layer 1: Far back — 3 big steep peaks -->
+        <path d="M-40 480 L200 380 L420 60 L640 380 L900 100 L1100 380 L1440 480Z" fill="url(#mtn-back)"/>
+        <!-- Snow: peak at 420,60 -->
+        <path d="M420 60 L390 130 L400 125 L420 60 L440 125 L450 130Z" fill="rgba(255,255,255,0.4)"/>
+        <!-- Snow: peak at 900,100 -->
+        <path d="M900 100 L870 170 L880 162 L900 100 L920 162 L930 170Z" fill="rgba(255,255,255,0.4)"/>
 
-        <!-- Snow caps back -->
-        <path d="M600 200 L620 185 L640 200Z" fill="rgba(255,255,255,0.35)"/>
-        <path d="M760 180 L780 162 L800 180Z" fill="rgba(255,255,255,0.4)"/>
-        <path d="M940 170 L960 152 L980 172Z" fill="rgba(255,255,255,0.35)"/>
+        <!-- Layer 2: Mid — 2 steep peaks offset -->
+        <path d="M-40 480 L100 400 L300 350 L620 120 L860 370 L1150 80 L1350 360 L1440 400 L1440 480Z" fill="url(#mtn-mid)"/>
+        <!-- Snow: peak at 620,120 -->
+        <path d="M620 120 L592 185 L600 178 L620 120 L640 178 L648 185Z" fill="rgba(255,255,255,0.55)"/>
+        <!-- Snow: peak at 1150,80 -->
+        <path d="M1150 80 L1120 155 L1130 145 L1150 80 L1170 145 L1180 155Z" fill="rgba(255,255,255,0.55)"/>
 
-        <!-- Layer 2: Mid range -->
-        <path d="M0 370 L80 310 L160 340 L260 280 L360 320 L480 250 L560 290 L660 230 L740 270 L840 210 L920 250 L1020 200 L1100 240 L1180 210 L1280 260 L1360 230 L1440 280 L1440 480 L0 480Z" fill="url(#mtn-mid)"/>
+        <!-- Layer 3: Front-mid — 1 dominant peak + shoulder -->
+        <path d="M-40 480 L200 420 L500 360 L800 140 L1050 380 L1300 320 L1440 380 L1440 480Z" fill="url(#mtn-front-mid)"/>
+        <!-- Snow: peak at 800,140 -->
+        <path d="M800 140 L772 210 L782 200 L800 140 L818 200 L828 210Z" fill="rgba(255,255,255,0.5)"/>
 
-        <!-- Snow caps mid -->
-        <path d="M480 250 L500 232 L520 250Z" fill="rgba(255,255,255,0.5)"/>
-        <path d="M660 230 L680 210 L700 230Z" fill="rgba(255,255,255,0.55)"/>
-        <path d="M840 210 L860 188 L880 210Z" fill="rgba(255,255,255,0.5)"/>
-        <path d="M1020 200 L1040 180 L1060 200Z" fill="rgba(255,255,255,0.45)"/>
+        <!-- Layer 4: Treeline / forest -->
+        <path d="M0 440 L40 420 L80 432 L120 412 L160 428 L200 408 L240 424 L280 404 L320 420 L360 400 L400 418 L440 398 L480 416 L520 396 L560 414 L600 394 L640 412 L680 392 L720 410 L760 390 L800 408 L840 388 L880 406 L920 386 L960 404 L1000 384 L1040 402 L1080 382 L1120 400 L1160 382 L1200 398 L1240 378 L1280 396 L1320 380 L1360 396 L1400 376 L1440 392 L1440 480 L0 480Z" fill="url(#trees-grad)"/>
+        <!-- Pine trees -->
+        <polygon points="120,412 130,380 140,412" fill="#132F1E" opacity="0.7"/>
+        <polygon points="200,408 210,374 220,408" fill="#132F1E" opacity="0.65"/>
+        <polygon points="360,400 370,366 380,400" fill="#132F1E" opacity="0.7"/>
+        <polygon points="440,398 448,368 456,398" fill="#132F1E" opacity="0.6"/>
+        <polygon points="600,394 610,360 620,394" fill="#132F1E" opacity="0.7"/>
+        <polygon points="760,390 770,356 780,390" fill="#132F1E" opacity="0.65"/>
+        <polygon points="920,386 930,352 940,386" fill="#132F1E" opacity="0.7"/>
+        <polygon points="1080,382 1090,348 1100,382" fill="#132F1E" opacity="0.6"/>
+        <polygon points="1240,378 1250,344 1260,378" fill="#132F1E" opacity="0.7"/>
+        <polygon points="1400,376 1408,348 1416,376" fill="#132F1E" opacity="0.65"/>
 
-        <!-- Layer 3: Front-mid range with ridges -->
-        <path d="M0 400 L100 340 L180 370 L300 300 L400 350 L520 280 L620 320 L720 260 L800 300 L900 250 L980 290 L1080 240 L1160 280 L1260 250 L1360 290 L1440 260 L1440 480 L0 480Z" fill="url(#mtn-front-mid)"/>
-
-        <!-- Snow caps front-mid -->
-        <path d="M720 260 L740 240 L760 260Z" fill="rgba(255,255,255,0.5)"/>
-        <path d="M900 250 L920 228 L940 250Z" fill="rgba(255,255,255,0.45)"/>
-
-        <!-- Layer 4: Treeline / forest silhouette -->
-        <path d="M0 440 L40 420 L80 430 L120 410 L160 425 L200 405 L240 420 L280 400 L320 418 L360 395 L400 415 L440 398 L480 412 L520 390 L560 410 L600 392 L640 408 L680 388 L720 405 L760 385 L800 402 L840 382 L880 400 L920 380 L960 398 L1000 378 L1040 396 L1080 375 L1120 395 L1160 378 L1200 393 L1240 372 L1280 390 L1320 375 L1360 392 L1400 370 L1440 388 L1440 480 L0 480Z" fill="url(#trees-grad)"/>
-
-        <!-- Small pine tree silhouettes on treeline -->
-        <!-- Left cluster -->
-        <polygon points="80,430 90,400 100,430" fill="#132F1E" opacity="0.7"/>
-        <polygon points="110,425 118,398 126,425" fill="#132F1E" opacity="0.6"/>
-        <polygon points="140,420 150,390 160,420" fill="#132F1E" opacity="0.7"/>
-        <!-- Mid cluster -->
-        <polygon points="400,415 410,382 420,415" fill="#132F1E" opacity="0.65"/>
-        <polygon points="440,410 448,384 456,410" fill="#132F1E" opacity="0.6"/>
-        <polygon points="470,408 480,378 490,408" fill="#132F1E" opacity="0.7"/>
-        <polygon points="520,400 530,368 540,400" fill="#132F1E" opacity="0.65"/>
-        <!-- Right cluster -->
-        <polygon points="800,402 810,370 820,402" fill="#132F1E" opacity="0.7"/>
-        <polygon points="850,398 858,372 866,398" fill="#132F1E" opacity="0.6"/>
-        <polygon points="900,395 910,362 920,395" fill="#132F1E" opacity="0.7"/>
-        <polygon points="960,390 968,365 976,390" fill="#132F1E" opacity="0.6"/>
-        <!-- Far right -->
-        <polygon points="1100,390 1110,358 1120,390" fill="#132F1E" opacity="0.65"/>
-        <polygon points="1200,385 1208,360 1216,385" fill="#132F1E" opacity="0.6"/>
-        <polygon points="1280,382 1290,352 1300,382" fill="#132F1E" opacity="0.7"/>
-
-        <!-- Layer 5: Very front — dark base -->
-        <path d="M0 460 L200 440 L400 450 L600 435 L800 445 L1000 430 L1200 445 L1440 435 L1440 480 L0 480Z" fill="#0B2A4A"/>
+        <!-- Layer 5: Dark base -->
+        <path d="M0 460 L200 445 L400 455 L600 440 L800 450 L1000 438 L1200 450 L1440 440 L1440 480 L0 480Z" fill="#0B2A4A"/>
       </svg>
     </div>
     <div class="hero-scroll">
