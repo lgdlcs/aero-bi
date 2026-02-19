@@ -173,11 +173,14 @@ body {
 }
 .paraglider svg { width: 100%; height: 100%; }
 
-.paraglider-1 { width: 140px; top: 18%; right: 14%; animation: float1 6s ease-in-out infinite; }
-.paraglider-2 { width: 90px; top: 28%; right: 32%; animation: float2 8s ease-in-out infinite; opacity: 0.7; }
-.paraglider-3 { width: 55px; top: 14%; right: 50%; animation: float3 10s ease-in-out infinite; opacity: 0.45; }
-.paraglider-4 { width: 110px; top: 35%; right: 8%; animation: float2 7s ease-in-out infinite 1s; opacity: 0.65; }
-.paraglider-5 { width: 40px; top: 10%; right: 60%; animation: float3 12s ease-in-out infinite; opacity: 0.35; }
+.paraglider-1 { width: 150px; top: 16%; right: 15%; animation: float1 6s ease-in-out infinite; }
+.paraglider-2 { width: 95px; top: 26%; right: 34%; animation: float2 8s ease-in-out infinite; opacity: 0.75; }
+.paraglider-3 { width: 70px; top: 12%; right: 52%; animation: float3 10s ease-in-out infinite; opacity: 0.65; }
+.paraglider-4 { width: 80px; top: 34%; right: 10%; animation: float2 7s ease-in-out infinite 1s; opacity: 0.7; }
+.paraglider-5 { width: 45px; top: 8%; right: 62%; animation: float3 12s ease-in-out infinite; opacity: 0.45; }
+.paraglider-6 { width: 35px; top: 22%; right: 70%; animation: float1 14s ease-in-out infinite 2s; opacity: 0.4; }
+.paraglider-7 { width: 28px; top: 6%; right: 40%; animation: float2 16s ease-in-out infinite 3s; opacity: 0.3; }
+.paraglider-8 { width: 38px; top: 30%; right: 55%; animation: float3 11s ease-in-out infinite 1.5s; opacity: 0.35; }
 
 @keyframes float1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
