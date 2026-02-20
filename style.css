@@ -514,7 +514,18 @@ body {
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
 
-  .hero-content { max-width: 100%; }
+  .hero-content { max-width: 100%; padding: 0 20px; }
+  .hero h1 { text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+  .hero-sub { text-shadow: 0 1px 10px rgba(0,0,0,0.8); color: rgba(255,255,255,0.9); font-size: 0.88rem; }
+  .hero-tag { text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(11, 42, 74, 0.6) 0%,
+      rgba(11, 42, 74, 0.75) 40%,
+      rgba(11, 42, 74, 0.5) 100%
+    ) !important;
+  }
   .grid-3, .grid-2, .stage-grid, .video-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
