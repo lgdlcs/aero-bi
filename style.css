@@ -69,6 +69,12 @@ body {
   text-transform: capitalize;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--pure-white); }
+.nav-lang {
+  background: rgba(255,255,255,0.12); border-radius: 6px; padding: 4px 10px !important;
+  font-size: 0.82rem !important; letter-spacing: 0.02em; backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.15); transition: background 0.2s, color 0.2s;
+}
+.nav-lang:hover { background: rgba(255,255,255,0.22); color: var(--pure-white); }
 .nav-links a.active::after {
   content: ''; position: absolute; bottom: -6px; left: 0; right: 0;
   height: 2px; background: var(--pure-white);
