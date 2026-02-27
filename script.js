@@ -47,3 +47,20 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
   });
 });
+
+// Deep-link to stage tabs from nav
+document.querySelectorAll('a[href="#stage-parapente"], a[href="#stage-minivoile"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = link.getAttribute('href');
+    const tabMap = { '#stage-parapente': 'parapente', '#stage-minivoile': 'minivoile' };
+    const tabName = tabMap[target];
+    if (tabName) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      const tab = document.querySelector(`.tab[data-tab="${tabName}"]`);
+      if (tab) tab.classList.add('active');
+      const content = document.getElementById('tab-' + tabName);
+      if (content) content.classList.add('active');
+    }
+  });
+});

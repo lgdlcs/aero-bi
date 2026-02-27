@@ -18,9 +18,21 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#activites">Activités</a></li>
-        <li><a href="#baptemes">Baptêmes</a></li>
-        <li><a href="#stages">Stages</a></li>
+        <li class="nav-dropdown">
+          <a href="#baptemes" class="nav-dropdown-trigger">Baptêmes <span class="nav-arrow">▾</span></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="#baptemes-parapente">Baptême Parapente</a></li>
+            <li><a href="#baptemes-speedriding">Baptême Speed Riding</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#stages" class="nav-dropdown-trigger">Stages <span class="nav-arrow">▾</span></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="#stage-parapente">Stage Parapente</a></li>
+            <li><a href="#stage-minivoile">Stage Mini-voile / Speed Flying</a></li>
+          </ul>
+        </li>
+        <li><a href="#galerie">Galerie</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#videos">Vidéos</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -398,9 +410,10 @@
     </div>
   </section>
 
-  <!-- BAPTÊMES -->
-  <section class="section section-cloud" id="baptemes">
+  <!-- BAPTÊMES PARAPENTE -->
+  <section class="section section-cloud" id="baptemes-parapente">
     <div class="container">
+      <span id="baptemes"></span>
       <h2 class="section-title">Baptêmes parapente</h2>
       <hr class="section-divider">
       <p class="section-sub">Volez au-dessus de Morzine-Avoriaz et repartez avec des souvenirs inoubliables.</p>
@@ -485,6 +498,24 @@
     </div>
   </section>
 
+  <!-- BAPTÊMES SPEED RIDING -->
+  <section class="section section-sky" id="baptemes-speedriding">
+    <div class="container">
+      <h2 class="section-title">Baptêmes speed riding</h2>
+      <hr class="section-divider">
+      <p class="section-sub">Découvrez le speed riding en biplace — ski + voile pour des sensations uniques.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">⛷️🪂</div>
+          <h3>Baptême Speed Riding</h3>
+          <p>Vol biplace ski + voile sur les pistes de Morzine-Avoriaz. Sensations garanties dans un cadre sécurisé avec K-loo.</p>
+          <div style="margin-top:16px"><a href="#contact" class="btn btn-primary btn-sm">Réserver</a></div>
+        </div>
+      </div>
+      <p style="margin-top:32px;color:var(--text-muted);font-size:0.88rem">📞 Appelez pour les tarifs et disponibilités — chaque baptême est adapté aux conditions du jour.</p>
+    </div>
+  </section>
+
   <!-- STAGES -->
   <section class="section section-sky" id="stages">
     <div class="container">
@@ -499,6 +530,7 @@
       </div>
 
       <!-- Parapente -->
+      <span id="stage-parapente"></span>
       <div class="tab-content active" id="tab-parapente">
         <div class="stage-grid">
           <div class="stage-card">
@@ -574,6 +606,7 @@
       </div>
 
       <!-- Mini-voile -->
+      <span id="stage-minivoile"></span>
       <div class="tab-content" id="tab-minivoile">
         <div class="stage-grid">
           <div class="stage-card">
@@ -627,6 +660,29 @@
             <span class="stat-label">disciplines</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE PHOTOS -->
+  <section class="section section-sky" id="galerie">
+    <div class="container">
+      <h2 class="section-title">Galerie</h2>
+      <hr class="section-divider">
+      <p class="section-sub">Quelques moments capturés en vol et sur le terrain.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 1</span></div></div>
+        <div class="gallery-item gallery-item-tall"><div class="gallery-placeholder">📸<span>Photo 2</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 3</span></div></div>
+        <div class="gallery-item gallery-item-wide"><div class="gallery-placeholder">📸<span>Photo 4</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 5</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 6</span></div></div>
+        <div class="gallery-item gallery-item-tall"><div class="gallery-placeholder">📸<span>Photo 7</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 8</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 9</span></div></div>
+        <div class="gallery-item gallery-item-wide"><div class="gallery-placeholder">📸<span>Photo 10</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 11</span></div></div>
+        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 12</span></div></div>
       </div>
     </div>
   </section>

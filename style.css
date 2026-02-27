@@ -7,15 +7,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Sky palette */
+  /* Sky palette — v2 orange */
   --deep-sky: #0B2A4A;
-  --sky-blue: #1565A0;
-  --cerulean: #2196F3;
-  --light-sky: #64B5F6;
+  --sky-blue: #E8650A;
+  --cerulean: #FF7A1A;
+  --light-sky: #FFB066;
   --cloud-white: #F0F4F8;
   --pure-white: #FFFFFF;
   --text-muted: #8FAABE;
-  --teal-accent: #26C6DA;
+  --teal-accent: #FF7A1A;
   --warm-gold: #FFB74D;
   --overlay-dark: rgba(11, 42, 74, 0.88);
 
@@ -83,6 +83,29 @@ body {
 .nav-toggle span {
   display: block; width: 24px; height: 2px; background: var(--pure-white);
   margin: 5px 0; transition: 0.3s;
+}
+
+/* ============ NAV DROPDOWNS ============ */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; }
+.nav-arrow { font-size: 0.7rem; opacity: 0.6; transition: transform 0.2s; }
+.nav-dropdown:hover .nav-arrow { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  display: none; position: absolute; top: 100%; left: -12px;
+  background: rgba(11, 42, 74, 0.95); backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  padding: 8px 0; min-width: 220px; list-style: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu li { padding: 0; }
+.nav-dropdown-menu a {
+  display: block; padding: 10px 20px; font-size: 0.84rem !important;
+  color: rgba(255,255,255,0.7) !important; transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover {
+  background: rgba(255,255,255,0.08); color: var(--pure-white) !important;
 }
 
 /* ============ HERO ============ */
@@ -375,7 +398,7 @@ body {
   font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;
   color: var(--deep-sky); margin-bottom: 8px;
 }
-.price { font-size: 2.2rem; font-weight: 800; color: var(--sky-blue); }
+.price { font-size: 2.2rem; font-weight: 800; color: #E8650A; }
 .price span { font-size: 0.85rem; font-weight: 500; color: #5A7A94; }
 .price-alt { font-size: 0.88rem; color: #5A7A94; margin-top: 4px; }
 .price-card ul { list-style: none; flex: 1; margin-bottom: 24px; }
@@ -507,6 +530,34 @@ body {
 .footer-links a:hover { color: var(--pure-white); }
 .footer-copy { font-size: 0.78rem; color: var(--text-muted); opacity: 0.5; }
 
+/* ============ GALLERY ============ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 16px;
+}
+.gallery-item {
+  border-radius: var(--radius); overflow: hidden;
+}
+.gallery-item-tall { grid-row: span 2; }
+.gallery-item-wide { grid-column: span 2; }
+.gallery-placeholder {
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 2px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; font-size: 2rem; color: rgba(255,255,255,0.2);
+  transition: border-color 0.3s, background 0.3s;
+}
+.gallery-placeholder span { font-size: 0.78rem; }
+.gallery-placeholder:hover {
+  border-color: var(--teal-accent);
+  background: rgba(255,122,26,0.06);
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
   .nav-links {
@@ -532,7 +583,15 @@ body {
       rgba(11, 42, 74, 0.5) 100%
     ) !important;
   }
-  .grid-3, .grid-2, .stage-grid, .video-grid { grid-template-columns: 1fr; }
+  .grid-3, .grid-2, .stage-grid, .video-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-auto-rows: 180px; }
+  .gallery-item-tall { grid-row: span 1; }
+  .gallery-item-wide { grid-column: span 1; }
+  .nav-dropdown-menu {
+    position: static; background: none; border: none;
+    box-shadow: none; backdrop-filter: none; padding: 0 0 0 16px; display: block;
+  }
+  .nav-arrow { display: none; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-stats { flex-direction: row; flex-wrap: wrap; }
