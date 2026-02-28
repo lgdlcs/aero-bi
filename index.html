@@ -30,6 +30,7 @@
           <ul class="nav-dropdown-menu">
             <li><a href="#stage-parapente">Stage Parapente</a></li>
             <li><a href="#stage-minivoile">Stage Mini-voile / Speed Flying</a></li>
+            <li><a href="#planning">Planning</a></li>
           </ul>
         </li>
         <li><a href="#galerie">Galerie</a></li>
@@ -572,31 +573,37 @@
             <h3>Découverte</h3>
             <p class="stage-price-tag">115€ · 1 demi-journée</p>
             <p>Premiers virages skiés avec voile, découverte de la portance, premiers jumps sur notre run école.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
           <div class="stage-card">
             <h3>Initiation 2 séances</h3>
             <p class="stage-price-tag">210€ · 2 demi-journées</p>
             <p>Approfondissement des phases skiées, petits jumps et vols en liaison radio.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
           <div class="stage-card">
             <h3>Initiation 3 séances</h3>
             <p class="stage-price-tag">290€ · 3 demi-journées</p>
             <p>Autonomie sur le run, mix ski/vol avec virages et approche du touch'n'go.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
           <div class="stage-card">
             <h3>Initiation 4 séances</h3>
             <p class="stage-price-tag">360€ · 4 demi-journées</p>
             <p>Montée progressive, phases de vol plus longues, virages et flair dans la pente.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
           <div class="stage-card">
             <h3>Initiation 5 séances</h3>
             <p class="stage-price-tag">420€ · 5 demi-journées</p>
             <p>Consolidation vers l'autonomie, découverte du grand run.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
           <div class="stage-card">
             <h3>Cours particulier</h3>
             <p class="stage-price-tag">240€ · 1 demi-journée (3h)</p>
             <p>Formation individuelle à votre rythme.</p>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
           </div>
         </div>
         <div class="stage-info">
@@ -629,6 +636,36 @@
           </ul>
           <p><strong>À prévoir :</strong> repas, certificat médical, assurance FFVL, hébergement.</p>
           <p><strong>Note :</strong> bonne forme physique requise. Appelez pour en discuter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANNING DES STAGES -->
+  <section class="section section-dark-accent" id="planning" style="display:none">
+    <div class="container">
+      <h2 class="section-title">Planning des stages</h2>
+      <hr class="section-divider">
+      <p class="section-sub">Prochaines dates disponibles — mis à jour régulièrement.</p>
+      <div id="planning-loading" class="planning-spinner">Chargement du planning…</div>
+      <div id="planning-error" class="planning-error" style="display:none">
+        <p>Impossible de charger le planning pour le moment.</p>
+        <p>Contactez-nous directement : <a href="tel:0626354806">06 26 35 48 06</a></p>
+      </div>
+      <div id="planning-table-container" style="display:none">
+        <div class="planning-table-wrap">
+          <table class="planning-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Activité</th>
+                <th>Durée</th>
+                <th>Places</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="planning-body"></tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -695,19 +732,19 @@
       <p class="section-sub">Quelques images de nos activités à Morzine-Avoriaz.</p>
       <div class="video-grid">
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/u9mWtTai6QI" loading="lazy" allowfullscreen title="Vol biplace parapente sur mer de nuages"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/u9mWtTai6QI?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Vol biplace parapente sur mer de nuages"></iframe>
           <div class="video-label">Vol biplace — mer de nuages</div>
         </div>
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/PfT9G0GMa-s" loading="lazy" allowfullscreen title="École speedriding Morzine Avoriaz"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/PfT9G0GMa-s?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="École speedriding Morzine Avoriaz"></iframe>
           <div class="video-label">École speed riding — Morzine Avoriaz</div>
         </div>
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/pHlzzS-k8LY" loading="lazy" allowfullscreen title="Vol biplace parapente Morzine"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/pHlzzS-k8LY?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Vol biplace parapente Morzine"></iframe>
           <div class="video-label">Vol biplace parapente — Morzine</div>
         </div>
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/mV4GPqT37p0" loading="lazy" allowfullscreen title="Speed riding perfectionnement"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/mV4GPqT37p0?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Speed riding perfectionnement"></iframe>
           <div class="video-label">Speed riding — perfectionnement</div>
         </div>
       </div>

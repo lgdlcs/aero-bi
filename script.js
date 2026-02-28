@@ -1,3 +1,128 @@
+// ============ PLANNING — Google Sheet integration ============
+const SHEET_CONFIG = {
+  // K-loo: coller ici la clé publiée (la partie "2PACX-xxx" de l'URL)
+  publishedKey: ''
+};
+
+(function initPlanning() {
+  var section = document.getElementById('planning');
+  var loading = document.getElementById('planning-loading');
+  var error = document.getElementById('planning-error');
+  var tableContainer = document.getElementById('planning-table-container');
+  var tbody = document.getElementById('planning-body');
+
+  if (!section || !tbody) return;
+  if (!SHEET_CONFIG.publishedKey) return; // section stays hidden
+
+  section.style.display = '';
+
+  var url = 'https://docs.google.com/spreadsheets/d/e/' +
+    SHEET_CONFIG.publishedKey + '/pub?gid=0&single=true&output=csv';
+
+  fetch(url)
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text();
+    })
+    .then(function(csv) {
+      var rows = parseCSV(csv);
+      if (rows.length < 2) throw new Error('empty');
+      renderTable(tbody, rows.slice(1));
+      loading.style.display = 'none';
+      tableContainer.style.display = '';
+    })
+    .catch(function() {
+      loading.style.display = 'none';
+      error.style.display = '';
+    });
+})();
+
+function parseCSV(text) {
+  var rows = [];
+  var row = [];
+  var field = '';
+  var inQuotes = false;
+
+  for (var i = 0; i < text.length; i++) {
+    var c = text[i];
+    var next = text[i + 1];
+
+    if (inQuotes) {
+      if (c === '"' && next === '"') {
+        field += '"';
+        i++;
+      } else if (c === '"') {
+        inQuotes = false;
+      } else {
+        field += c;
+      }
+    } else {
+      if (c === '"') {
+        inQuotes = true;
+      } else if (c === ',') {
+        row.push(field.trim());
+        field = '';
+      } else if (c === '\n' || (c === '\r' && next === '\n')) {
+        row.push(field.trim());
+        rows.push(row);
+        row = [];
+        field = '';
+        if (c === '\r') i++;
+      } else {
+        field += c;
+      }
+    }
+  }
+  if (field || row.length) {
+    row.push(field.trim());
+    rows.push(row);
+  }
+  return rows;
+}
+
+function renderTable(tbody, dataRows) {
+  tbody.innerHTML = dataRows.map(function(cols) {
+    var date = cols[0] || '';
+    var activity = cols[1] || '';
+    var duration = cols[2] || '';
+    var spots = cols[3] || '';
+    var notes = cols[4] || '';
+
+    var actClass = getActivityClass(activity);
+    var spotsClass = getSpotsClass(spots);
+
+    return '<tr>' +
+      '<td>' + escapeHtml(date) + '</td>' +
+      '<td><span class="badge-activity ' + actClass + '">' + escapeHtml(activity) + '</span></td>' +
+      '<td>' + escapeHtml(duration) + '</td>' +
+      '<td><span class="badge-spots ' + spotsClass + '">' + escapeHtml(spots) + '</span></td>' +
+      '<td>' + escapeHtml(notes) + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function getActivityClass(activity) {
+  var a = activity.toLowerCase();
+  if (a.indexOf('parapente') !== -1 || a.indexOf('paraglid') !== -1) return 'badge-parapente';
+  if (a.indexOf('speed') !== -1) return 'badge-speedriding';
+  if (a.indexOf('mini') !== -1) return 'badge-minivoile';
+  return 'badge-default';
+}
+
+function getSpotsClass(spots) {
+  var s = spots.toLowerCase();
+  if (s === 'complet' || s === 'full' || s === '0') return 'badge-spots-full';
+  var n = parseInt(spots, 10);
+  if (!isNaN(n) && n <= 2) return 'badge-spots-limited';
+  return 'badge-spots-available';
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('nav-toggle');
 const links = document.getElementById('nav-links');
