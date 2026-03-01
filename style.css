@@ -896,3 +896,35 @@ body {
   .contact-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2.4rem; }
 }
+
+/* Alt Tab Studio promo banner */
+.ats-promo {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  border-top: 1px solid rgba(255, 109, 0, 0.2);
+  padding: 32px 0;
+  text-align: center;
+}
+.ats-promo-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ats-promo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.ats-promo-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+.ats-promo-sub strong {
+  color: var(--primary-bright);
+}
+.ats-promo-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
