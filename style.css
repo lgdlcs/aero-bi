@@ -15,19 +15,19 @@
   --primary-gradient: linear-gradient(135deg, #E8650A 0%, #FF7A1A 100%);
 
   /* Dark palette */
-  --bg-dark: #0B1D33;
-  --bg-dark-end: #0F2844;
-  --overlay-dark: rgba(11, 29, 51, 0.88);
+  --bg-dark: #111111;
+  --bg-dark-end: #1a1a1a;
+  --overlay-dark: rgba(0, 0, 0, 0.88);
 
   /* Light palette */
-  --bg-light: #FFF9F4;
-  --bg-light-alt: #FFF5ED;
+  --bg-light: #f5f5f5;
+  --bg-light-alt: #ececec;
 
   /* Neutrals */
   --white: #FFFFFF;
   --text-on-dark: rgba(255, 255, 255, 0.72);
-  --text-on-light: #3D2C1E;
-  --text-muted-light: #7A6A5C;
+  --text-on-light: #1a1a1a;
+  --text-muted-light: #666666;
   --border-dark: rgba(255, 255, 255, 0.08);
   --border-light: #F0E4D8;
   --gold: #FFB74D;

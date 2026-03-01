@@ -230,3 +230,60 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
     }
   });
 });
+
+// ============ YOUTUBE FALLBACK for file:// protocol ============
+(function initYouTubeFallback() {
+  // Only activate on file:// protocol
+  if (window.location.protocol !== 'file:') return;
+
+  var iframes = document.querySelectorAll('iframe[src*="youtube"]');
+  
+  iframes.forEach(function(iframe) {
+    var src = iframe.src;
+    var videoIdMatch = src.match(/embed\/([a-zA-Z0-9_-]+)/);
+    
+    if (!videoIdMatch) return;
+    
+    var videoId = videoIdMatch[1];
+    var title = iframe.title || 'Vidéo YouTube';
+    var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+    var youtubeUrl = 'https://www.youtube.com/watch?v=' + videoId;
+    
+    // Create fallback link with thumbnail
+    var fallback = document.createElement('a');
+    fallback.href = youtubeUrl;
+    fallback.target = '_blank';
+    fallback.rel = 'noopener';
+    fallback.className = 'youtube-fallback';
+    fallback.style.cssText = 'display: block; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: transform 0.2s; text-decoration: none;';
+    
+    var img = document.createElement('img');
+    img.src = thumbnailUrl;
+    img.alt = title;
+    img.style.cssText = 'width: 100%; height: 100%; object-fit: cover;';
+    img.loading = 'lazy';
+    
+    var playBtn = document.createElement('div');
+    playBtn.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255,0,0,0.8); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; cursor: pointer;';
+    playBtn.innerHTML = '▶';
+    
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 16px; color: white; font-size: 14px; font-weight: 500;';
+    overlay.textContent = title;
+    
+    fallback.appendChild(img);
+    fallback.appendChild(playBtn);
+    fallback.appendChild(overlay);
+    
+    // Add hover effect
+    fallback.addEventListener('mouseenter', function() {
+      fallback.style.transform = 'scale(1.02)';
+    });
+    fallback.addEventListener('mouseleave', function() {
+      fallback.style.transform = 'scale(1)';
+    });
+    
+    // Replace iframe
+    iframe.parentNode.replaceChild(fallback, iframe);
+  });
+})();
