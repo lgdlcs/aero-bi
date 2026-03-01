@@ -200,11 +200,11 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
     if (!details) return;
     
     const isVisible = details.style.display !== 'none';
-    
-    // Fermer tous les autres accordéons
     const isEnglish = document.documentElement.lang === 'en';
     const showMoreText = isEnglish ? 'Learn more' : 'En savoir +';
+    const hideText = isEnglish ? 'Hide' : 'Masquer';
     
+    // Fermer tous les autres accordéons
     document.querySelectorAll('.stage-details').forEach(detail => {
       if (detail !== details) {
         detail.style.display = 'none';
@@ -216,11 +216,6 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
         btn.textContent = showMoreText;
       }
     });
-    
-    // Toggle l'accordéon actuel
-    const isEnglish = document.documentElement.lang === 'en';
-    const showMoreText = isEnglish ? 'Learn more' : 'En savoir +';
-    const hideText = isEnglish ? 'Hide' : 'Masquer';
     
     if (isVisible) {
       details.classList.add('closing');
