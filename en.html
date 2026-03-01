@@ -13,7 +13,9 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Aero-Bi</a>
+      <a href="#" class="nav-logo">
+        <img src="images/logo.png" alt="Aero-Bi" style="height: 30px; width: auto;">
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -33,6 +35,7 @@
             <li><a href="#planning">Schedule</a></li>
           </ul>
         </li>
+        <li><a href="#gift-voucher">Gift Voucher</a></li>
         <li><a href="#galerie">Gallery</a></li>
         <li><a href="#apropos">About</a></li>
         <li><a href="#videos">Videos</a></li>
@@ -528,6 +531,7 @@
         <button class="tab active" data-tab="parapente">Paragliding</button>
         <button class="tab" data-tab="speedriding">Speed Riding</button>
         <button class="tab" data-tab="minivoile">Mini-wing</button>
+        <button class="tab" data-tab="gift-voucher">Gift Voucher</button>
       </div>
 
       <!-- Parapente -->
@@ -537,27 +541,39 @@
           <div class="stage-card">
             <h3>Beginner</h3>
             <p class="stage-duration">4 full days · Monday → Thursday</p>
-            <p>Progressively learn the technique to fly a paraglider safely. The goal: your first solo flight under your own wing.</p>
-            <ul>
-              <li>2 days training slope + inflation</li>
-              <li>Tandem educational flight if needed</li>
-              <li>Basic theory</li>
-              <li>Groups of 2 to 6 people</li>
-              <li>Equipment + shuttle included</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Book now</a>
+            <p>Progressively learn the technique to fly a paraglider safely.</p>
+            <div class="stage-details" id="details-parapente-initiation-en" style="display: none;">
+              <p>The goal: your first solo flight under your own wing.</p>
+              <ul>
+                <li>2 days training slope + inflation</li>
+                <li>Tandem educational flight if needed</li>
+                <li>Basic theory</li>
+                <li>Groups of 2 to 6 people</li>
+                <li>Equipment + shuttle included</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-parapente-initiation-en">Learn more</button>
+              <a href="pdfs/inscription-parapente-initiation.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Progression</h3>
             <p class="stage-duration">À la carte · full or half days</p>
-            <p>Work towards full autonomy. Each flight includes a briefing and debriefing.</p>
-            <ul>
-              <li>35€/flight (school gear) · 30€/flight (your gear)</li>
-              <li>Radio-guided by instructor</li>
-              <li>Discover new flying sites</li>
-              <li>FFVL certification possible</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Book now</a>
+            <p>Work towards full autonomy.</p>
+            <div class="stage-details" id="details-parapente-progression-en" style="display: none;">
+              <p>Each flight includes a briefing and debriefing.</p>
+              <ul>
+                <li>35€/flight (school gear) · 30€/flight (your gear)</li>
+                <li>Radio-guided by instructor</li>
+                <li>Discover new flying sites</li>
+                <li>FFVL certification possible</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-parapente-progression-en">Learn more</button>
+              <a href="pdfs/inscription-parapente-progression.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
@@ -573,37 +589,55 @@
             <h3>Discovery</h3>
             <p class="stage-price-tag">115€ · 1 half-day</p>
             <p>First ski turns with wing, discovering lift, first jumps on our training run.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Beginner 2 sessions</h3>
             <p class="stage-price-tag">210€ · 2 half-days</p>
             <p>Deepening ski phases, small jumps and radio-guided flights.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Beginner 3 sessions</h3>
             <p class="stage-price-tag">290€ · 3 half-days</p>
             <p>Autonomy on the run, ski/flight mix with turns and touch'n'go approach.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Beginner 4 sessions</h3>
             <p class="stage-price-tag">360€ · 4 half-days</p>
             <p>Progressive build-up, longer flight phases, turns and flaring on the slope.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Beginner 5 sessions</h3>
             <p class="stage-price-tag">420€ · 5 half-days</p>
             <p>Consolidation towards autonomy, discovering the big run.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Private lesson</h3>
             <p class="stage-price-tag">240€ · 1 half-day (3h)</p>
             <p>Individual training at your own pace.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Book now</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Book now</a>
+              <a href="pdfs/inscription-speedriding.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
@@ -619,13 +653,19 @@
           <div class="stage-card">
             <h3>S.A.V. Course — Beginner</h3>
             <p class="stage-duration">4 full days · Monday → Thursday</p>
-            <p>Foundational training to become a mini-wing pilot. Field practice + theory. Goal: your first solo flight.</p>
-            <ul>
-              <li>Groups of 2 to 5 people</li>
-              <li>Tandem educational flight if needed</li>
-              <li>Equipment + shuttle included</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Book now</a>
+            <p>Foundational training to become a mini-wing pilot.</p>
+            <div class="stage-details" id="details-minivoile-initiation-en" style="display: none;">
+              <p>Field practice + theory. Goal: your first solo flight.</p>
+              <ul>
+                <li>Groups of 2 to 5 people</li>
+                <li>Tandem educational flight if needed</li>
+                <li>Equipment + shuttle included</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-minivoile-initiation-en">Learn more</button>
+              <a href="pdfs/inscription-minivoile.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📄 Registration (PDF)</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
@@ -637,6 +677,51 @@
           <p><strong>To plan:</strong> meals, medical certificate, FFVL insurance, accommodation.</p>
           <p><strong>Note:</strong> good physical fitness required. Call to discuss.</p>
         </div>
+
+      <!-- Gift Voucher -->
+      <div class="tab-content" id="tab-gift-voucher">
+        <div class="bon-cadeau-section">
+          <div class="bon-cadeau-card">
+            <div class="bon-cadeau-icon">🎁</div>
+            <h3>Give an unforgettable experience</h3>
+            <p>The Aero-Bi gift voucher is the promise of a flight over the Alps to offer to your loved ones. Tandem paragliding, course or speed riding — let them choose their adventure.</p>
+            
+            <div class="bon-cadeau-features">
+              <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Valid for 1 year</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🌄</span>
+                <span>All our packages</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📱</span>
+                <span>Flexible booking</span>
+              </div>
+            </div>
+
+            <div class="bon-cadeau-actions">
+              <a href="pdfs/bon-cadeau.pdf" target="_blank" rel="noopener" class="btn btn-primary">🎁 Download gift voucher (PDF)</a>
+              <a href="#contact" class="btn btn-outline-dark">More info</a>
+            </div>
+          </div>
+          
+          <div class="bon-cadeau-info">
+            <h4>How does it work?</h4>
+            <ol class="bon-cadeau-steps">
+              <li>Download and fill out the gift voucher</li>
+              <li>Send us the voucher with your payment</li>
+              <li>We send you the personalized gift voucher</li>
+              <li>The recipient contacts us to book</li>
+            </ol>
+            
+            <div class="bon-cadeau-note">
+              <p><strong>💡 Tip:</strong> Specify the type of activity (tandem flight, course...) or leave the choice free to the recipient.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -675,6 +760,9 @@
   <section class="section section-sky" id="apropos">
     <div class="container">
       <div class="about-grid">
+        <div class="about-photo">
+          <img src="images/photo_profil_.jpg" alt="Pascal 'K-loo' Leclerc - Aero-Bi Instructor" loading="lazy" style="object-fit: cover; width: 100%; border-radius: var(--radius);">
+        </div>
         <div class="about-text">
           <h2 class="section-title">Pascal 'K-loo' Leclerc</h2>
           <hr class="section-divider">
@@ -697,6 +785,9 @@
             <span class="stat-label">disciplines</span>
           </div>
         </div>
+        <div class="about-certification">
+          <img src="images/FFVL_3.png" alt="FFVL Certification - French Free Flight Federation" loading="lazy" style="height: 60px; width: auto; margin-top: 20px;">
+        </div>
       </div>
     </div>
   </section>
@@ -708,18 +799,97 @@
       <hr class="section-divider">
       <p class="section-sub">Some moments captured in flight and on the ground.</p>
       <div class="gallery-grid">
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 1</span></div></div>
-        <div class="gallery-item gallery-item-tall"><div class="gallery-placeholder">📸<span>Photo 2</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 3</span></div></div>
-        <div class="gallery-item gallery-item-wide"><div class="gallery-placeholder">📸<span>Photo 4</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 5</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 6</span></div></div>
-        <div class="gallery-item gallery-item-tall"><div class="gallery-placeholder">📸<span>Photo 7</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 8</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 9</span></div></div>
-        <div class="gallery-item gallery-item-wide"><div class="gallery-placeholder">📸<span>Photo 10</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 11</span></div></div>
-        <div class="gallery-item"><div class="gallery-placeholder">📸<span>Photo 12</span></div></div>
+        <div class="gallery-item"><img src="images/parapente01.jpg" alt="Winter paragliding flight above the clouds" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item gallery-item-tall"><img src="images/parapente04.jpg" alt="Tandem paragliding selfie in flight" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/parapente05.jpg" alt="Paraglider silhouette in flight" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item gallery-item-wide"><img src="images/banniere2026-1.jpg" alt="Aero-Bi 2026 banner" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/parapente06.jpg" alt="Child paragliding flight" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/journee_decouverte.png" alt="Speed riding discovery day" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item gallery-item-tall"><img src="images/perf.jpg" alt="Speed wing from the summit" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/mini1.png" alt="Mini-wing for kids" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/mini2.png" alt="Mini-wing activity" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item gallery-item-wide"><img src="images/parapente03.jpg" alt="Group flight at sunset" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/mini3.png" alt="Kids mini-wing session" loading="lazy" style="object-fit: cover;"></div>
+        <div class="gallery-item"><img src="images/mini4.png" alt="Mini-wing school" loading="lazy" style="object-fit: cover;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT VOUCHER -->
+  <section class="section section-sky" id="gift-voucher">
+    <div class="container">
+      <h2 class="section-title">Gift Voucher</h2>
+      <hr class="section-divider">
+      <p class="section-sub">Give an unforgettable flight over the Alps — the gift that leaves a lasting impression.</p>
+      
+      <div class="bon-cadeau-main">
+        <div class="bon-cadeau-card-main">
+          <div class="bon-cadeau-icon">🎁</div>
+          <h3>The perfect gift for any occasion</h3>
+          <p>Birthday, Christmas, Father's Day... A paragliding tandem flight or a course stays in memory much longer than any object.</p>
+          
+          <div class="bon-cadeau-features">
+            <div class="feature-item">
+              <span class="feature-icon">⏰</span>
+              <span>Valid for 1 year</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🎯</span>
+              <span>All packages</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">📞</span>
+              <span>Free booking</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🌟</span>
+              <span>Unique experience</span>
+            </div>
+          </div>
+
+          <div class="bon-cadeau-actions">
+            <a href="pdfs/bon-cadeau.pdf" target="_blank" rel="noopener" class="btn btn-primary">🎁 Download gift voucher (PDF)</a>
+            <a href="#contact" class="btn btn-outline-dark">Questions?</a>
+          </div>
+        </div>
+        
+        <div class="bon-cadeau-process">
+          <h4>How to proceed?</h4>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h5>Download</h5>
+                <p>Get the gift voucher and fill it out</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h5>Send</h5>
+                <p>Send us the voucher + payment</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h5>Receive</h5>
+                <p>We send you the personalized voucher</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h5>Book</h5>
+                <p>The recipient contacts K-loo directly</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bon-cadeau-tip">
+            <p><strong>💡 Tip:</strong> You can specify the activity (classic tandem, performance, course...) or leave the choice free to the recipient.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -202,6 +202,9 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
     const isVisible = details.style.display !== 'none';
     
     // Fermer tous les autres accordéons
+    const isEnglish = document.documentElement.lang === 'en';
+    const showMoreText = isEnglish ? 'Learn more' : 'En savoir +';
+    
     document.querySelectorAll('.stage-details').forEach(detail => {
       if (detail !== details) {
         detail.style.display = 'none';
@@ -210,11 +213,15 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
     document.querySelectorAll('.stage-toggle').forEach(btn => {
       if (btn !== toggle) {
         btn.classList.remove('active');
-        btn.textContent = 'En savoir +';
+        btn.textContent = showMoreText;
       }
     });
     
     // Toggle l'accordéon actuel
+    const isEnglish = document.documentElement.lang === 'en';
+    const showMoreText = isEnglish ? 'Learn more' : 'En savoir +';
+    const hideText = isEnglish ? 'Hide' : 'Masquer';
+    
     if (isVisible) {
       details.classList.add('closing');
       setTimeout(() => {
@@ -222,11 +229,11 @@ document.querySelectorAll('.stage-toggle').forEach(toggle => {
         details.classList.remove('closing');
       }, 300);
       toggle.classList.remove('active');
-      toggle.textContent = 'En savoir +';
+      toggle.textContent = showMoreText;
     } else {
       details.style.display = 'block';
       toggle.classList.add('active');
-      toggle.textContent = 'Masquer';
+      toggle.textContent = hideText;
     }
   });
 });
