@@ -189,3 +189,44 @@ document.querySelectorAll('a[href="#stage-parapente"], a[href="#stage-minivoile"
     }
   });
 });
+
+// Stage details toggles (accordéon "En savoir +")
+document.querySelectorAll('.stage-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = toggle.getAttribute('data-target');
+    const details = document.getElementById(targetId);
+    
+    if (!details) return;
+    
+    const isVisible = details.style.display !== 'none';
+    
+    // Fermer tous les autres accordéons
+    document.querySelectorAll('.stage-details').forEach(detail => {
+      if (detail !== details) {
+        detail.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('.stage-toggle').forEach(btn => {
+      if (btn !== toggle) {
+        btn.classList.remove('active');
+        btn.textContent = 'En savoir +';
+      }
+    });
+    
+    // Toggle l'accordéon actuel
+    if (isVisible) {
+      details.classList.add('closing');
+      setTimeout(() => {
+        details.style.display = 'none';
+        details.classList.remove('closing');
+      }, 300);
+      toggle.classList.remove('active');
+      toggle.textContent = 'En savoir +';
+    } else {
+      details.style.display = 'block';
+      toggle.classList.add('active');
+      toggle.textContent = 'Masquer';
+    }
+  });
+});

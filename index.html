@@ -33,6 +33,7 @@
             <li><a href="#planning">Planning</a></li>
           </ul>
         </li>
+        <li><a href="#bon-cadeau">Bon Cadeau</a></li>
         <li><a href="#galerie">Galerie</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#videos">Vidéos</a></li>
@@ -528,6 +529,7 @@
         <button class="tab active" data-tab="parapente">Parapente</button>
         <button class="tab" data-tab="speedriding">Speed Riding</button>
         <button class="tab" data-tab="minivoile">Mini-voile</button>
+        <button class="tab" data-tab="bon-cadeau">Bon Cadeau</button>
       </div>
 
       <!-- Parapente -->
@@ -537,27 +539,39 @@
           <div class="stage-card">
             <h3>Initiation</h3>
             <p class="stage-duration">4 jours complets · lundi → jeudi</p>
-            <p>Découvrez progressivement la technique pour voler en parapente en sécurité. L'objectif : votre premier grand vol seul sous votre voile.</p>
-            <ul>
-              <li>2 jours pente école + gonflage</li>
-              <li>Biplace pédagogique si nécessaire</li>
-              <li>Théorie élémentaire</li>
-              <li>Groupes de 2 à 6 personnes</li>
-              <li>Matériel + navettes inclus</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Réserver</a>
+            <p>Découvrez progressivement la technique pour voler en parapente en sécurité.</p>
+            <div class="stage-details" id="details-parapente-initiation" style="display: none;">
+              <p>L'objectif : votre premier grand vol seul sous votre voile.</p>
+              <ul>
+                <li>2 jours pente école + gonflage</li>
+                <li>Biplace pédagogique si nécessaire</li>
+                <li>Théorie élémentaire</li>
+                <li>Groupes de 2 à 6 personnes</li>
+                <li>Matériel + navettes inclus</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-parapente-initiation">En savoir +</button>
+              <a href="#" data-pdf="inscription-initiation.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Progression</h3>
             <p class="stage-duration">À la carte · journées ou demi-journées</p>
-            <p>Tendez vers l'autonomie complète. Chaque vol est précédé d'un briefing et suivi d'un debriefing.</p>
-            <ul>
-              <li>35€/vol (matériel école) · 30€/vol (votre matériel)</li>
-              <li>Guidage radio moniteur</li>
-              <li>Découverte de nouveaux sites</li>
-              <li>Validation brevets FFVL possible</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Réserver</a>
+            <p>Tendez vers l'autonomie complète.</p>
+            <div class="stage-details" id="details-parapente-progression" style="display: none;">
+              <p>Chaque vol est précédé d'un briefing et suivi d'un debriefing.</p>
+              <ul>
+                <li>35€/vol (matériel école) · 30€/vol (votre matériel)</li>
+                <li>Guidage radio moniteur</li>
+                <li>Découverte de nouveaux sites</li>
+                <li>Validation brevets FFVL possible</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-parapente-progression">En savoir +</button>
+              <a href="#" data-pdf="inscription-progression.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
@@ -573,37 +587,55 @@
             <h3>Découverte</h3>
             <p class="stage-price-tag">115€ · 1 demi-journée</p>
             <p>Premiers virages skiés avec voile, découverte de la portance, premiers jumps sur notre run école.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Initiation 2 séances</h3>
             <p class="stage-price-tag">210€ · 2 demi-journées</p>
             <p>Approfondissement des phases skiées, petits jumps et vols en liaison radio.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Initiation 3 séances</h3>
             <p class="stage-price-tag">290€ · 3 demi-journées</p>
             <p>Autonomie sur le run, mix ski/vol avec virages et approche du touch'n'go.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Initiation 4 séances</h3>
             <p class="stage-price-tag">360€ · 4 demi-journées</p>
             <p>Montée progressive, phases de vol plus longues, virages et flair dans la pente.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Initiation 5 séances</h3>
             <p class="stage-price-tag">420€ · 5 demi-journées</p>
             <p>Consolidation vers l'autonomie, découverte du grand run.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
           <div class="stage-card">
             <h3>Cours particulier</h3>
             <p class="stage-price-tag">240€ · 1 demi-journée (3h)</p>
             <p>Formation individuelle à votre rythme.</p>
-            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:12px">Réserver</a>
+            <div class="stage-buttons">
+              <a href="#contact" class="btn btn-outline-dark btn-sm">Réserver</a>
+              <a href="#" data-pdf="inscription-speedriding.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
@@ -619,23 +651,69 @@
           <div class="stage-card">
             <h3>Stage S.A.V. — Initiation</h3>
             <p class="stage-duration">4 jours complets · lundi → jeudi</p>
-            <p>Formation de base pour devenir pilote de mini-voile. Pratique terrain + théorie. Objectif : premier grand vol seul.</p>
-            <ul>
-              <li>Groupes de 2 à 5 personnes</li>
-              <li>Biplace pédagogique si nécessaire</li>
-              <li>Matériel + navettes inclus</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-sm">Réserver</a>
+            <p>Formation de base pour devenir pilote de mini-voile.</p>
+            <div class="stage-details" id="details-minivoile-initiation" style="display: none;">
+              <p>Pratique terrain + théorie. Objectif : premier grand vol seul.</p>
+              <ul>
+                <li>Groupes de 2 à 5 personnes</li>
+                <li>Biplace pédagogique si nécessaire</li>
+                <li>Matériel + navettes inclus</li>
+              </ul>
+            </div>
+            <div class="stage-buttons">
+              <button class="btn btn-outline-dark btn-sm stage-toggle" data-target="details-minivoile-initiation">En savoir +</button>
+              <a href="#" data-pdf="inscription-minivoile.pdf" class="btn btn-primary btn-sm">Inscription</a>
+            </div>
           </div>
         </div>
         <div class="stage-info">
-          <p><strong>Prochains stages :</strong></p>
-          <ul>
-            <li>22 — 25 juin 2026 (3 places dispo)</li>
-            <li>7 — 11 septembre 2026 (5 places dispo)</li>
-          </ul>
           <p><strong>À prévoir :</strong> repas, certificat médical, assurance FFVL, hébergement.</p>
           <p><strong>Note :</strong> bonne forme physique requise. Appelez pour en discuter.</p>
+        </div>
+      </div>
+
+      <!-- Bon Cadeau -->
+      <div class="tab-content" id="tab-bon-cadeau">
+        <div class="bon-cadeau-section">
+          <div class="bon-cadeau-card">
+            <div class="bon-cadeau-icon">🎁</div>
+            <h3>Offrez un moment inoubliable</h3>
+            <p>Le bon cadeau Aero-Bi, c'est la promesse d'un vol au-dessus des Alpes à offrir à vos proches. Baptême parapente, stage ou speed riding — laissez-les choisir leur aventure.</p>
+            
+            <div class="bon-cadeau-features">
+              <div class="feature-item">
+                <span class="feature-icon">✅</span>
+                <span>Valable 1 an</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🌄</span>
+                <span>Toutes nos formules</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📱</span>
+                <span>Réservation flexible</span>
+              </div>
+            </div>
+
+            <div class="bon-cadeau-actions">
+              <a href="#" data-pdf="bon-cadeau.pdf" class="btn btn-primary">Télécharger le bon cadeau</a>
+              <a href="#contact" class="btn btn-outline-dark">Plus d'infos</a>
+            </div>
+          </div>
+          
+          <div class="bon-cadeau-info">
+            <h4>Comment ça marche ?</h4>
+            <ol class="bon-cadeau-steps">
+              <li>Téléchargez et remplissez le bon cadeau</li>
+              <li>Envoyez-nous le bon avec votre règlement</li>
+              <li>Nous vous envoyons le bon cadeau personnalisé</li>
+              <li>Le bénéficiaire nous contacte pour réserver</li>
+            </ol>
+            
+            <div class="bon-cadeau-note">
+              <p><strong>💡 Conseil :</strong> Précisez le type d'activité (baptême, stage...) ou laissez le choix libre au bénéficiaire.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -746,6 +824,85 @@
         <div class="video-card">
           <iframe src="https://www.youtube-nocookie.com/embed/mV4GPqT37p0?rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Speed riding perfectionnement"></iframe>
           <div class="video-label">Speed riding — perfectionnement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BON CADEAU -->
+  <section class="section section-sky" id="bon-cadeau">
+    <div class="container">
+      <h2 class="section-title">Bon Cadeau</h2>
+      <hr class="section-divider">
+      <p class="section-sub">Offrez un vol inoubliable au-dessus des Alpes — le cadeau qui marque à vie.</p>
+      
+      <div class="bon-cadeau-main">
+        <div class="bon-cadeau-card-main">
+          <div class="bon-cadeau-icon">🎁</div>
+          <h3>Le cadeau parfait pour toutes les occasions</h3>
+          <p>Anniversaire, Noël, fête des pères... Un baptême de parapente ou un stage reste gravé dans les mémoires bien plus longtemps qu'un objet.</p>
+          
+          <div class="bon-cadeau-features">
+            <div class="feature-item">
+              <span class="feature-icon">⏰</span>
+              <span>Valable 1 an</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🎯</span>
+              <span>Toutes formules</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">📞</span>
+              <span>Réservation libre</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🌟</span>
+              <span>Expérience unique</span>
+            </div>
+          </div>
+
+          <div class="bon-cadeau-actions">
+            <a href="#" data-pdf="bon-cadeau.pdf" class="btn btn-primary">Télécharger le bon cadeau</a>
+            <a href="#contact" class="btn btn-outline-dark">Questions ?</a>
+          </div>
+        </div>
+        
+        <div class="bon-cadeau-process">
+          <h4>Comment procéder ?</h4>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h5>Téléchargez</h5>
+                <p>Récupérez le bon cadeau et remplissez-le</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h5>Envoyez</h5>
+                <p>Transmettez-nous le bon + règlement</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h5>Recevez</h5>
+                <p>Nous vous envoyons le bon personnalisé</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h5>Réservez</h5>
+                <p>Le bénéficiaire contacte K-loo directement</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bon-cadeau-tip">
+            <p><strong>💡 Astuce :</strong> Vous pouvez préciser l'activité (baptême classique, performance, stage...) ou laisser le choix libre au bénéficiaire.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -498,6 +498,39 @@ body {
 .stage-card ul { list-style: none; margin-bottom: 16px; }
 .stage-card li { padding: 3px 0; font-size: 0.85rem; color: var(--text-on-dark); }
 .stage-card li::before { content: "— "; color: var(--primary-bright); }
+
+/* ============ STAGE BUTTONS & DETAILS ============ */
+.stage-buttons {
+  display: flex; gap: 12px; margin-top: 16px;
+}
+.stage-buttons .btn {
+  flex: 1; text-align: center;
+}
+.stage-details {
+  margin: 16px 0 0; padding-top: 16px;
+  border-top: 1px solid rgba(232, 101, 10, 0.15);
+  animation: slideDown 0.3s ease-out;
+}
+.stage-details.closing {
+  animation: slideUp 0.3s ease-out;
+}
+.stage-toggle {
+  transition: all 0.3s;
+}
+.stage-toggle.active {
+  background: var(--primary-gradient) !important;
+  color: var(--white) !important;
+  border-color: transparent !important;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
 .stage-info {
   background: rgba(232, 101, 10, 0.06);
   border-radius: var(--radius); padding: 24px;
@@ -573,6 +606,98 @@ body {
   padding: 14px 18px; font-size: 0.88rem; font-weight: 600; color: var(--bg-dark);
   font-family: var(--font-heading);
 }
+
+/* ============ BON CADEAU ============ */
+.bon-cadeau-main { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: start; }
+.bon-cadeau-card-main {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg); padding: 40px 36px; backdrop-filter: blur(8px);
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.bon-cadeau-card-main:hover {
+  border-color: rgba(232, 101, 10, 0.25);
+  background: rgba(232, 101, 10, 0.04);
+  box-shadow: 0 8px 32px rgba(232, 101, 10, 0.08);
+}
+.bon-cadeau-icon { font-size: 3rem; text-align: center; margin-bottom: 24px; }
+.bon-cadeau-card-main h3 {
+  font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 16px; text-align: center;
+}
+.bon-cadeau-card-main > p {
+  color: var(--text-on-dark); text-align: center; margin-bottom: 32px;
+  font-size: 0.95rem; line-height: 1.7;
+}
+.bon-cadeau-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.feature-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.88rem; color: var(--text-on-dark);
+}
+.feature-icon { color: var(--primary-bright); font-size: 1.1rem; }
+.bon-cadeau-actions { display: flex; gap: 16px; justify-content: center; }
+.bon-cadeau-actions .btn { flex: 1; text-align: center; }
+
+.bon-cadeau-process h4 {
+  font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 24px; color: var(--white);
+}
+.process-steps { display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px; }
+.process-step { display: flex; align-items: flex-start; gap: 16px; }
+.step-number {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--primary-gradient); color: var(--white);
+  font-size: 0.85rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.step-content h5 {
+  font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700;
+  margin-bottom: 4px; color: var(--white);
+}
+.step-content p { font-size: 0.85rem; color: var(--text-on-dark); margin: 0; line-height: 1.6; }
+.bon-cadeau-tip {
+  background: rgba(232, 101, 10, 0.06); border-radius: var(--radius); padding: 16px;
+  border: 1px solid rgba(232, 101, 10, 0.12);
+}
+.bon-cadeau-tip p { font-size: 0.85rem; color: var(--text-on-dark); margin: 0; }
+
+/* BON CADEAU dans les tabs stages */
+.bon-cadeau-section { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start; }
+.bon-cadeau-card {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg); padding: 32px 28px; backdrop-filter: blur(8px);
+}
+.bon-cadeau-card .bon-cadeau-icon { font-size: 2.2rem; margin-bottom: 20px; text-align: center; }
+.bon-cadeau-card h3 {
+  font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700;
+  margin-bottom: 14px; text-align: center;
+}
+.bon-cadeau-card > p { color: var(--text-on-dark); margin-bottom: 24px; font-size: 0.88rem; line-height: 1.7; }
+.bon-cadeau-card .bon-cadeau-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.bon-cadeau-card .bon-cadeau-actions { display: flex; flex-direction: column; gap: 12px; }
+
+.bon-cadeau-info h4 {
+  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
+  margin-bottom: 16px; color: var(--white);
+}
+.bon-cadeau-steps { list-style: none; margin-bottom: 20px; }
+.bon-cadeau-steps li {
+  padding: 6px 0; font-size: 0.85rem; color: var(--text-on-dark);
+  position: relative; padding-left: 24px;
+}
+.bon-cadeau-steps li::before {
+  content: counter(step-counter); counter-increment: step-counter;
+  position: absolute; left: 0; top: 6px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--primary-bright); color: var(--white);
+  font-size: 0.7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.bon-cadeau-steps { counter-reset: step-counter; }
+.bon-cadeau-note {
+  background: rgba(232, 101, 10, 0.06); border-radius: var(--radius); padding: 14px;
+  border: 1px solid rgba(232, 101, 10, 0.12);
+}
+.bon-cadeau-note p { font-size: 0.83rem; color: var(--text-on-dark); margin: 0; }
 
 /* ============ FOOTER ============ */
 .footer {
@@ -744,6 +869,18 @@ body {
   .planning-table th, .planning-table td { padding: 12px 14px; font-size: 0.82rem; }
 
   .container { padding: 0 20px; }
+  
+  /* Responsive BON CADEAU */
+  .bon-cadeau-main { grid-template-columns: 1fr; gap: 32px; }
+  .bon-cadeau-features { grid-template-columns: 1fr; }
+  .bon-cadeau-actions { flex-direction: column; }
+  .process-steps { gap: 16px; }
+  
+  .bon-cadeau-section { grid-template-columns: 1fr; gap: 24px; }
+  .bon-cadeau-card .bon-cadeau-actions { flex-direction: column; }
+  
+  .stage-buttons { flex-direction: column; }
+  .stage-buttons .btn { flex: none; }
 }
 
 @media (max-width: 480px) {
