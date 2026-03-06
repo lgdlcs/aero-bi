@@ -67,7 +67,7 @@ body {
 .nav-inner {
   max-width: 1140px; margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
+  height: 80px;
 }
 .nav-logo {
   font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;
@@ -505,6 +505,21 @@ body {
 }
 .stage-buttons .btn {
   flex: 1; text-align: center;
+}
+.stage-summary-list {
+  list-style: none; margin: 12px 0 0; padding: 0;
+}
+.stage-summary-list li {
+  position: relative; padding: 6px 0 6px 16px;
+  font-size: 0.88rem; line-height: 1.6; color: var(--text-muted-light);
+}
+.stage-summary-list li::before {
+  content: '•'; position: absolute; left: 0; color: var(--primary);
+  font-weight: 700;
+}
+.stage-details h4 {
+  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
+  color: var(--bg-dark); margin: 16px 0 8px;
 }
 .stage-details {
   margin: 16px 0 0; padding-top: 16px;
