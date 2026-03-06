@@ -67,17 +67,17 @@ body {
 .nav-inner {
   max-width: 1140px; margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
-  height: 80px;
+  height: 90px;
 }
 .nav-logo {
   font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;
   color: var(--white); text-decoration: none; letter-spacing: 0.5px;
 }
 .nav-links {
-  display: flex; align-items: center; gap: 20px; list-style: none; flex-wrap: nowrap;
+  display: flex; align-items: center; gap: 24px; list-style: none; flex-wrap: nowrap;
 }
 .nav-links a {
-  color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.82rem;
+  color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.9rem;
   font-weight: 500; transition: color 0.25s; position: relative;
   text-transform: capitalize; white-space: nowrap;
 }
