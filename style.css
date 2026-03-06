@@ -519,7 +519,13 @@ body {
 }
 .stage-details h4 {
   font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
-  color: var(--bg-dark); margin: 16px 0 8px;
+  color: var(--primary); margin: 16px 0 8px;
+}
+.stage-details p {
+  color: var(--text-muted-light);
+}
+.stage-details ul {
+  color: var(--text-muted-light);
 }
 .stage-details {
   margin: 16px 0 0; padding-top: 16px;
