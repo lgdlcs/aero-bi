@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partenaires — Aero-Bi Parapente & Speed Riding Morzine</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-header {
+      background: var(--bg-dark); color: #fff; padding: 120px 32px 60px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { color: rgba(255,255,255,0.6); font-size: 1rem; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--primary); text-decoration: none; font-weight: 700;
+      font-size: 0.9rem; margin-bottom: 24px;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .partenaires-page-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px; padding: 48px 0 80px;
+    }
+    .partner-page-card {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--white); border: 1px solid var(--border-light);
+      border-radius: 12px; padding: 20px 24px;
+      text-decoration: none; color: var(--text-dark);
+      transition: all 0.2s;
+    }
+    .partner-page-card:hover {
+      border-color: var(--primary); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232,101,10,0.1);
+    }
+    .partner-page-card img {
+      width: 64px; height: 64px; object-fit: contain; border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .partner-page-card .partner-favicon {
+      width: 64px; height: 64px; border-radius: 8px;
+      background: var(--bg-dark); display: flex; align-items: center;
+      justify-content: center; font-size: 1.8rem; flex-shrink: 0;
+    }
+    .partner-page-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+    .partner-page-card p { font-size: 0.82rem; color: var(--text-muted-light); margin: 0; }
+    .partner-page-card .partner-url {
+      font-size: 0.72rem; color: var(--primary); margin-top: 4px; display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo-block">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.png" alt="Aero-Bi" style="height: 72px; width: auto;">
+        </a>
+        <div class="nav-contact-info">
+          <a href="tel:0626354806">📞 06 26 35 48 06</a>
+          <a href="mailto:aero-bi@hotmail.fr">✉️ aero-bi@hotmail.fr</a>
+        </div>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#baptemes-parapente">Baptême Parapente</a></li>
+        <li><a href="index.html#speedriding">Speed Riding</a></li>
+        <li><a href="index.html#stage-parapente">Stage Parapente</a></li>
+        <li><a href="index.html#stage-minivoile">Stage Mini-voile</a></li>
+        <li><a href="index.html#bon-cadeau">Bon Cadeau</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="partenaires.html" style="color:var(--primary)">Partenaires</a></li>
+        <li><a href="en.html" class="nav-lang">🇬🇧 EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    <h1>Nos Partenaires</h1>
+    <p>Ils partagent notre passion pour la montagne et les sports de plein air.</p>
+  </div>
+
+  <div class="container">
+    <div class="partenaires-page-grid">
+      <a href="https://www.ffvl.fr" target="_blank" rel="noopener" class="partner-page-card">
+        <img src="images/FFVL_3.png" alt="FFVL">
+        <div>
+          <h3>FFVL</h3>
+          <p>Fédération Française de Vol Libre</p>
+          <span class="partner-url">ffvl.fr</span>
+        </div>
+      </a>
+      <a href="https://www.nautichill.com" target="_blank" rel="noopener" class="partner-page-card">
+        <img src="images/partenaires/nautichill.png" alt="Nautichill">
+        <div>
+          <h3>Nautichill</h3>
+          <p>Activités nautiques à Morzine</p>
+          <span class="partner-url">nautichill.com</span>
+        </div>
+      </a>
+      <a href="https://www.adrenaline-morzine.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🏔️</div>
+        <div>
+          <h3>Adrenaline</h3>
+          <p>Sports extrêmes à Morzine</p>
+          <span class="partner-url">adrenaline-morzine.com</span>
+        </div>
+      </a>
+      <a href="https://www.2schuss.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">⛷️</div>
+        <div>
+          <h3>2Schuss</h3>
+          <p>Location de ski</p>
+          <span class="partner-url">2schuss.com</span>
+        </div>
+      </a>
+      <a href="https://www.frogs-rafting.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🐸</div>
+        <div>
+          <h3>Frogs Rafting</h3>
+          <p>Rafting & eaux vives</p>
+          <span class="partner-url">frogs-rafting.com</span>
+        </div>
+      </a>
+      <a href="https://www.rideandbreakfast.com" target="_blank" rel="noopener" class="partner-page-card">
+        <img src="images/partenaires/rideandbreakfast.png" alt="Ride & Breakfast">
+        <div>
+          <h3>Ride & Breakfast</h3>
+          <p>Hébergement & VTT</p>
+          <span class="partner-url">rideandbreakfast.com</span>
+        </div>
+      </a>
+      <a href="https://www.alikats.eu" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🏡</div>
+        <div>
+          <h3>Alikats</h3>
+          <p>Chalets de luxe à Morzine</p>
+          <span class="partner-url">alikats.eu</span>
+        </div>
+      </a>
+      <a href="https://www.crocblancchalet.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🐺</div>
+        <div>
+          <h3>Croc Blanc Chalet</h3>
+          <p>Location de chalets</p>
+          <span class="partner-url">crocblancchalet.com</span>
+        </div>
+      </a>
+      <a href="https://www.geeski.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🎿</div>
+        <div>
+          <h3>Geeski</h3>
+          <p>Cours de ski</p>
+          <span class="partner-url">geeski.com</span>
+        </div>
+      </a>
+      <a href="https://www.rent-bike-morzine.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🚴</div>
+        <div>
+          <h3>Rent Bike Morzine</h3>
+          <p>Location de VTT & vélos</p>
+          <span class="partner-url">rent-bike-morzine.com</span>
+        </div>
+      </a>
+      <a href="https://www.jeuxrevesetjouets.com" target="_blank" rel="noopener" class="partner-page-card">
+        <div class="partner-favicon">🧸</div>
+        <div>
+          <h3>Jeux Rêves et Jouets</h3>
+          <p>Magasin de jouets</p>
+          <span class="partner-url">jeuxrevesetjouets.com</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <img src="images/logo.png" alt="Aero-Bi" class="footer-logo" loading="lazy">
+          <p>École de parapente, speed riding et mini-voile à Morzine-Avoriaz depuis 2006.</p>
+        </div>
+        <div class="footer-right">
+          <p>📞 <a href="tel:0626354806">06 26 35 48 06</a></p>
+          <p>✉️ <a href="mailto:aero-bi@hotmail.fr">aero-bi@hotmail.fr</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Aero-Bi — Tous droits réservés · Site par <a href="https://lgdlcs.github.io/alt-tab-studio/" target="_blank" rel="noopener">Alt Tab Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
