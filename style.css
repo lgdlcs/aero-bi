@@ -942,18 +942,19 @@ body {
   flex-wrap: wrap;
 }
 
-/* ============ NAV CONTACT INFO ============ */
+/* ============ NAV LOGO BLOCK ============ */
 .nav-logo-block {
-  display: flex; flex-direction: column; align-items: flex-start;
+  display: flex; flex-direction: column; align-items: center;
+  margin: 8px 0;
 }
-.nav-contact-info {
-  display: flex; gap: 16px; margin-top: 4px;
+.nav-logo-block .nav-logo img {
+  height: 60px; width: auto;
 }
-.nav-contact-info a {
-  font-size: 0.72rem; color: rgba(255,255,255,0.6) !important;
-  text-decoration: none; font-weight: 600;
+.nav-contact-line {
+  font-size: 0.7rem; color: rgba(255,255,255,0.6) !important;
+  text-decoration: none; font-weight: 600; line-height: 1.4;
 }
-.nav-contact-info a:hover { color: var(--primary) !important; }
+.nav-contact-line:hover { color: var(--primary) !important; }
 
 /* ============ PRICE CARD IMAGE ============ */
 .price-card-img {
