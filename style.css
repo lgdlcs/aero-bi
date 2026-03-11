@@ -72,7 +72,7 @@ body {
 .nav-logo {
   font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;
   color: var(--white); text-decoration: none; letter-spacing: 0.5px;
-  margin: 12px; flex-shrink: 0;
+  margin-left: 12px; flex-shrink: 0;
 }
 .nav-links {
   display: flex; align-items: center; gap: 24px; list-style: none; flex-wrap: nowrap;
@@ -945,7 +945,7 @@ body {
 /* ============ NAV LOGO BLOCK ============ */
 .nav-logo-block {
   display: flex; flex-direction: column; align-items: center;
-  margin: 8px 0;
+  margin: 8px;
 }
 .nav-logo-block .nav-logo img {
   height: 40px; width: auto;
