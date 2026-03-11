@@ -4,7 +4,7 @@
 // 2. Types valides: INITIATION, PROGRESSION, PERFECTIONNEMENT, INIT MINI VOILE (ou vide)
 // 3. Fichier → Partager → Publier sur le Web → CSV
 // 4. Coller l'ID du sheet ci-dessous
-const PLANNING_SHEET_ID = '';  // ← coller l'ID du Google Sheet ici
+const PLANNING_SHEET_ID = '2PACX-1vQiH6SzG2DTdBT6Ghqxr4M_1Lj-UDU6-Y3_fr1SeelG1rKqXsuXJ8JSV6ZmkJiSn4gwPzOuAv5O0kt8';
 
 // Fallback: planning local (utilisé quand pas de Google Sheet)
 const PLANNING_FALLBACK = 'planning-template.csv';
