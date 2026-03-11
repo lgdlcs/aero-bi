@@ -131,16 +131,7 @@ body {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg,
-    #1a6fc4 0%,
-    #3a9ae8 20%,
-    #5bb5f5 40%,
-    #7ec8f8 55%,
-    #a8dcfb 68%,
-    #d0edfd 80%,
-    #eaf5fd 90%,
-    #f5faff 100%
-  );
+  background: url('images/hero-new.jpg') center/cover no-repeat;
 }
 /* Clouds */
 .hero-bg::before {
@@ -949,4 +940,64 @@ body {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* ============ NAV CONTACT INFO ============ */
+.nav-contact-info {
+  display: flex; gap: 12px; margin-top: 2px;
+}
+.nav-contact-info a {
+  font-size: 0.72rem; color: var(--text-muted-light) !important;
+  text-decoration: none; font-weight: 600;
+}
+.nav-contact-info a:hover { color: var(--primary) !important; }
+
+/* ============ PRICE CARD IMAGE ============ */
+.price-card-img {
+  width: 100%; height: 140px; overflow: hidden; border-radius: 10px 10px 0 0;
+  margin: -20px -20px 16px -20px; width: calc(100% + 40px);
+}
+.price-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* ============ STAGE CARD IMAGE ============ */
+.stage-card-img {
+  width: 100%; height: 140px; overflow: hidden; border-radius: 10px 10px 0 0;
+  margin: -24px -24px 16px -24px; width: calc(100% + 48px);
+}
+.stage-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* ============ PARTENAIRES GRID ============ */
+.partenaires-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px; justify-items: center;
+}
+.partner-card {
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none; color: var(--text-dark);
+  padding: 20px 16px; border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--white); transition: all 0.2s;
+  width: 100%; text-align: center;
+}
+.partner-card:hover {
+  border-color: var(--primary); transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,101,10,0.1);
+}
+.partner-card img {
+  height: 48px; width: auto; object-fit: contain; margin-bottom: 8px;
+}
+.partner-card span { font-size: 0.82rem; font-weight: 600; }
+.partner-placeholder {
+  font-size: 2rem; margin-bottom: 8px; display: block;
+}
+
+/* ============ HERO SCROLL ============ */
+.hero-scroll {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,0.6); font-size: 0.78rem; letter-spacing: 2px;
+  text-transform: uppercase;
 }

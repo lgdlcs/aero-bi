@@ -174,10 +174,10 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
 // Deep-link to stage tabs from nav
-document.querySelectorAll('a[href="#stage-parapente"], a[href="#stage-minivoile"]').forEach(link => {
+document.querySelectorAll('a[href="#stage-parapente"], a[href="#stage-minivoile"], a[href="#speedriding"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const target = link.getAttribute('href');
-    const tabMap = { '#stage-parapente': 'parapente', '#stage-minivoile': 'minivoile' };
+    const tabMap = { '#stage-parapente': 'parapente', '#stage-minivoile': 'minivoile', '#speedriding': 'speedriding' };
     const tabName = tabMap[target];
     if (tabName) {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
