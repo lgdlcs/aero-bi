@@ -20,34 +20,35 @@
     }
     .back-link:hover { text-decoration: underline; }
 
-    .partenaires-page-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px; padding: 48px 0 80px;
+    .partenaires-list { padding: 48px 0 80px; }
+
+    .partner-entry {
+      display: flex; gap: 24px; align-items: flex-start;
+      padding: 28px 0; border-bottom: 1px solid var(--border-light);
     }
-    .partner-page-card {
-      display: flex; align-items: center; gap: 16px;
-      background: var(--white); border: 1px solid var(--border-light);
-      border-radius: 12px; padding: 20px 24px;
-      text-decoration: none; color: var(--text-dark);
-      transition: all 0.2s;
-    }
-    .partner-page-card:hover {
-      border-color: var(--primary); transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(232,101,10,0.1);
-    }
-    .partner-page-card img {
-      width: 64px; height: 64px; object-fit: contain; border-radius: 8px;
-      flex-shrink: 0;
-    }
-    .partner-page-card .partner-favicon {
-      width: 64px; height: 64px; border-radius: 8px;
+    .partner-entry:last-child { border-bottom: none; }
+    .partner-entry .partner-icon {
+      width: 64px; height: 64px; border-radius: 12px;
       background: var(--bg-dark); display: flex; align-items: center;
-      justify-content: center; font-size: 1.8rem; flex-shrink: 0;
+      justify-content: center; font-size: 1.6rem; flex-shrink: 0;
+      color: rgba(255,255,255,0.8);
     }
-    .partner-page-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
-    .partner-page-card p { font-size: 0.82rem; color: var(--text-muted-light); margin: 0; }
-    .partner-page-card .partner-url {
-      font-size: 0.72rem; color: var(--primary); margin-top: 4px; display: block;
+    .partner-entry h3 {
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;
+      color: var(--text-dark);
+    }
+    .partner-entry p {
+      font-size: 0.88rem; color: var(--text-muted-light); line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .partner-entry .partner-link {
+      display: inline-block; font-size: 0.82rem; font-weight: 700;
+      color: var(--primary); text-decoration: none;
+    }
+    .partner-entry .partner-link:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .partner-entry { flex-direction: column; }
     }
   </style>
 </head>
@@ -86,99 +87,165 @@
   </div>
 
   <div class="container">
-    <div class="partenaires-page-grid">
-      <a href="https://www.ffvl.fr" target="_blank" rel="noopener" class="partner-page-card">
-        <img src="images/FFVL_3.png" alt="FFVL">
+    <div class="partenaires-list">
+
+      <div class="partner-entry">
+        <div class="partner-icon">🏄</div>
         <div>
-          <h3>FFVL</h3>
-          <p>Fédération Française de Vol Libre</p>
-          <span class="partner-url">ffvl.fr</span>
+          <h3>Nautichill — Base nautique du lac de Montriond</h3>
+          <p>La base nautique du lac de Montriond, près de Morzine, vous propose la location de Stand-up Paddle et Canoé-kayak ainsi que des cours et des stages de mai à septembre.</p>
+          <a href="https://nautichill.com/" target="_blank" rel="noopener" class="partner-link">nautichill.com →</a>
         </div>
-      </a>
-      <a href="https://www.nautichill.com" target="_blank" rel="noopener" class="partner-page-card">
-        <img src="images/partenaires/nautichill.png" alt="Nautichill">
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🏔️</div>
         <div>
-          <h3>Nautichill</h3>
-          <p>Activités nautiques à Morzine</p>
-          <span class="partner-url">nautichill.com</span>
+          <h3>Morzine Guide — Guide de Haute Montagne</h3>
+          <p>Envie de hors-pistes immaculé, d'arêtes effilées ou de sensations rares ? Guide de haute montagne, il vous accompagnera dans votre progression pour vous ouvrir les portes d'une montagne préservée.</p>
+          <a href="http://www.morzine-guide.com" target="_blank" rel="noopener" class="partner-link">morzine-guide.com →</a>
         </div>
-      </a>
-      <a href="https://www.adrenaline-morzine.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🏔️</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🎥</div>
         <div>
-          <h3>Adrenaline</h3>
-          <p>Sports extrêmes à Morzine</p>
-          <span class="partner-url">adrenaline-morzine.com</span>
+          <h3>Yetidrones — Photos et vidéos aériennes par drone</h3>
+          <p>Yetidrones assure la production de photos et de vidéos professionnelles issues de prises de vues aériennes par drones. Dispose d'une flotte de 5 drones spécialisés pour les différents types de prises de vues.</p>
+          <a href="http://www.yetidrones.fr/" target="_blank" rel="noopener" class="partner-link">yetidrones.fr →</a>
         </div>
-      </a>
-      <a href="https://www.2schuss.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">⛷️</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">⛷️</div>
         <div>
-          <h3>2Schuss</h3>
-          <p>Location de ski</p>
-          <span class="partner-url">2schuss.com</span>
+          <h3>Adrenaline Morzine — Ski School</h3>
+          <p>Adrenaline Morzine ski school is for all ages, kids from 4 to adults. Whether you're looking for adrenaline, sensations or just someone to reassure you, give you all the tips to start skiing safely.</p>
+          <a href="https://morzine-skischool.com/" target="_blank" rel="noopener" class="partner-link">morzine-skischool.com →</a>
         </div>
-      </a>
-      <a href="https://www.frogs-rafting.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🐸</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">⛷️</div>
         <div>
-          <h3>Frogs Rafting</h3>
-          <p>Rafting & eaux vives</p>
-          <span class="partner-url">frogs-rafting.com</span>
+          <h3>2 Schuss — Moniteur Ski & Snow indépendant</h3>
+          <p>Yvan Bertrand, moniteur SKI & SNOW indépendant. 2 SCHUSS vous propose des cours adaptés du petit expert au grand débutant ! « TOUT SCHUSS », la meilleure façon d'apprécier l'hiver !</p>
+          <a href="http://2schuss.com/" target="_blank" rel="noopener" class="partner-link">2schuss.com →</a>
         </div>
-      </a>
-      <a href="https://www.rideandbreakfast.com" target="_blank" rel="noopener" class="partner-page-card">
-        <img src="images/partenaires/rideandbreakfast.png" alt="Ride & Breakfast">
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🐸</div>
         <div>
-          <h3>Ride & Breakfast</h3>
-          <p>Hébergement & VTT</p>
-          <span class="partner-url">rideandbreakfast.com</span>
+          <h3>Frogs Rafting — Sports d'eau vive</h3>
+          <p>Spécialisés dans les sports d'eau vive : rafting, canyoning, hydrospeed, canoë kayak et escalade. Accessible pour tous les niveaux, des vacances inoubliables au cœur des montagnes !</p>
+          <a href="https://www.frogsrafting.com/fr/" target="_blank" rel="noopener" class="partner-link">frogsrafting.com →</a>
         </div>
-      </a>
-      <a href="https://www.alikats.eu" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🏡</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🚗</div>
         <div>
-          <h3>Alikats</h3>
-          <p>Chalets de luxe à Morzine</p>
-          <span class="partner-url">alikats.eu</span>
+          <h3>Car Cleaner 74 — Réparation cuir automobile</h3>
+          <p>Réparation de volants, sièges, banquettes et panneaux de portes en cuir. De la simple griffe aux déchirures profondes, ils redonnent un aspect neuf à vos cuirs.</p>
+          <a href="https://www.carcleaner74.fr" target="_blank" rel="noopener" class="partner-link">carcleaner74.fr →</a>
         </div>
-      </a>
-      <a href="https://www.crocblancchalet.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🐺</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🏠</div>
         <div>
-          <h3>Croc Blanc Chalet</h3>
-          <p>Location de chalets</p>
-          <span class="partner-url">crocblancchalet.com</span>
+          <h3>Ride & Breakfast — Chalet au cœur de Morzine-Avoriaz</h3>
+          <p>Le Chalet R&B est situé au cœur du domaine de ski de Morzine-Avoriaz. Un endroit chaleureux pour vivre et partager vos passions pour les sports de montagne.</p>
+          <a href="https://rideandbreakfast.com" target="_blank" rel="noopener" class="partner-link">rideandbreakfast.com →</a>
         </div>
-      </a>
-      <a href="https://www.geeski.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🎿</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🏡</div>
         <div>
-          <h3>Geeski</h3>
-          <p>Cours de ski</p>
-          <span class="partner-url">geeski.com</span>
+          <h3>Alikats — Chalets en pension complète</h3>
+          <p>Chalets en pension complète parmi les mieux notés des Alpes françaises du nord sur TripAdvisor. La Ferme à Jules est classée numéro 1 !</p>
+          <a href="https://alikats.eu/fr" target="_blank" rel="noopener" class="partner-link">alikats.eu →</a>
         </div>
-      </a>
-      <a href="https://www.rent-bike-morzine.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🚴</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🏔️</div>
         <div>
-          <h3>Rent Bike Morzine</h3>
-          <p>Location de VTT & vélos</p>
-          <span class="partner-url">rent-bike-morzine.com</span>
+          <h3>Mountain Voyages — Chalets de luxe</h3>
+          <p>Un séjour chez Mountain Voyages c'est beaucoup plus qu'un simple chalet de vacances. Tout le luxe auquel vous pouvez prétendre dans un chalet de sport d'hiver.</p>
+          <a href="https://www.mountainvoyageschalet.com/" target="_blank" rel="noopener" class="partner-link">mountainvoyageschalet.com →</a>
         </div>
-      </a>
-      <a href="https://www.jeuxrevesetjouets.com" target="_blank" rel="noopener" class="partner-page-card">
-        <div class="partner-favicon">🧸</div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🐺</div>
+        <div>
+          <h3>Croc Blanc Chalet — Location 4 saisons à Morzine</h3>
+          <p>Le Chalet Croc Blanc 4 Saisons se situe au cœur de Morzine, à quelques pas des pistes et des commerces. 5 chambres en suite, 10/12 personnes, trois niveaux.</p>
+          <a href="https://www.croc-blanc-chalet.com/" target="_blank" rel="noopener" class="partner-link">croc-blanc-chalet.com →</a>
+        </div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">✈️</div>
+        <div>
+          <h3>Kayak — Comparateur de voyages</h3>
+          <p>Moteur de recherche dédié au voyage : comparez les vols, hôtels, séjours et voitures de location disponibles auprès de centaines de partenaires.</p>
+          <a href="https://www.kayak.fr" target="_blank" rel="noopener" class="partner-link">kayak.fr →</a>
+        </div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🎿</div>
+        <div>
+          <h3>Geeski — Chalets familiaux</h3>
+          <p>Entreprise familiale de chalets à Samoëns, St Gervais et Morzine. Des vacances à la montagne les plus agréables possibles avec vos amis et votre famille.</p>
+          <a href="https://www.geeski.co.uk/" target="_blank" rel="noopener" class="partner-link">geeski.co.uk →</a>
+        </div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🚴</div>
+        <div>
+          <h3>Rent Bike Morzine — La Pédalerie</h3>
+          <p>Spécialiste de la location et vente de vélo. Un ensemble de vélos, vélos électriques et équipements dédiés à la pratique du vélo en montagne sur le domaine des Portes du Soleil.</p>
+          <a href="https://www.rentbike-morzine.com/" target="_blank" rel="noopener" class="partner-link">rentbike-morzine.com →</a>
+        </div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🧸</div>
         <div>
           <h3>Jeux Rêves et Jouets</h3>
-          <p>Magasin de jouets</p>
-          <span class="partner-url">jeuxrevesetjouets.com</span>
+          <p>Large choix de jouets & jeux de société pour tous les âges. Partagez des moments uniques en famille, entre amis. Novice ou joueur confirmé, dénichez votre coup de cœur.</p>
+          <a href="https://jeuxrevesetjouets.com/" target="_blank" rel="noopener" class="partner-link">jeuxrevesetjouets.com →</a>
         </div>
-      </a>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🪂</div>
+        <div>
+          <h3>Fly Safe Annecy — École de parapente SIV</h3>
+          <p>Une école de parapente de référence spécialisée dans les stages SIV. Que vous soyez pilote débutant ou confirmé, des formations adaptées à vos besoins.</p>
+          <a href="https://flysafeannecy.com/" target="_blank" rel="noopener" class="partner-link">flysafeannecy.com →</a>
+        </div>
+      </div>
+
+      <div class="partner-entry">
+        <div class="partner-icon">🌿</div>
+        <div>
+          <h3>Montagne Verte — Association environnementale</h3>
+          <p>Association loi 1901, reconnue d'intérêt général, avec une mission simple : développer des solutions durables pour la région de Morzine afin de réduire l'impact environnemental.</p>
+          <a href="https://montagneverte.org/projects/alpinexpress/" target="_blank" rel="noopener" class="partner-link">montagneverte.org →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- FOOTER (same as index) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -198,7 +265,6 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     document.getElementById('nav-toggle').addEventListener('click', () => {
       document.getElementById('nav-links').classList.toggle('open');
     });
