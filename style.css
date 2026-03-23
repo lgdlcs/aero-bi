@@ -1052,10 +1052,10 @@ body {
   color: #fff; letter-spacing: 0.3px;
 }
 .planning-month td.day-type.empty { background: none; }
-.planning-month td.day-type.initiation { background: #4CAF50; }
-.planning-month td.day-type.progression { background: #FFC107; color: #333; }
-.planning-month td.day-type.perfectionnement { background: #FF6D00; }
-.planning-month td.day-type.init-mini-voile { background: #9E9E9E; }
+.planning-month td.day-type.initiation { background: #FFC107; color: #333; }
+.planning-month td.day-type.progression { background: #4CAF50; }
+.planning-month td.day-type.perfectionnement { background: #2196F3; }
+.planning-month td.day-type.init-mini-voile { background: #FF6D00; }
 .planning-month tr.has-note td.day-type {
   background-image: repeating-linear-gradient(
     -45deg, transparent, transparent 3px,
