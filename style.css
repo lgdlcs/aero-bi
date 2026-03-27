@@ -42,7 +42,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 136px; }
 
 body {
   font-family: var(--font-body);
@@ -54,9 +54,25 @@ body {
 
 .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
 
+/* ============ TOP BAR ============ */
+.top-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+  height: 36px;
+  background: rgba(11, 29, 51, 0.98);
+  border-bottom: 1px solid rgba(232, 101, 10, 0.15);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 0 32px; gap: 24px;
+}
+.top-bar-contact {
+  font-size: 0.78rem; color: rgba(255,255,255,0.65);
+  text-decoration: none; font-weight: 600;
+  transition: color 0.2s;
+}
+.top-bar-contact:hover { color: var(--primary-light); }
+
 /* ============ NAV ============ */
 .nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
   transition: background 0.4s, border-color 0.4s;
 }
 .nav.scrolled {
@@ -67,7 +83,7 @@ body {
 .nav-inner {
   max-width: 100%; margin: 0; padding: 0 32px 0 0;
   display: flex; align-items: center; justify-content: space-between;
-  height: 90px;
+  height: 100px;
 }
 .nav-logo {
   font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;
@@ -78,8 +94,8 @@ body {
   display: flex; align-items: center; gap: 24px; list-style: none; flex-wrap: nowrap;
 }
 .nav-links a {
-  color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.9rem;
-  font-weight: 500; transition: color 0.25s; position: relative;
+  color: rgba(255,255,255,0.65); text-decoration: none; font-size: 1rem;
+  font-weight: 600; transition: color 0.25s; position: relative;
   text-transform: capitalize; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--primary-light); }
@@ -948,7 +964,7 @@ body {
   margin: 8px;
 }
 .nav-logo-block .nav-logo img {
-  height: 40px; width: auto;
+  height: 65px; width: auto;
 }
 .nav-contact-line {
   font-size: 0.7rem; color: rgba(255,255,255,0.6) !important;
