@@ -2,7 +2,7 @@
 
 Site vitrine pour [Aero-Bi](https://www.aero-bi.com/), école de parapente, speed riding et mini-voile à Morzine-Avoriaz (Portes du Soleil).
 
-### 🔗 [Voir le site live →](https://lgdlcs.github.io/aero-bi/)
+### 🔗 [Voir le site live →](https://www.aero-bi.com/)
 
 ## Features
 
