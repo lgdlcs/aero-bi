@@ -573,18 +573,41 @@ body {
 .stage-info li::before { content: "📅 "; }
 
 /* ============ ABOUT ============ */
-.about-grid { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }
+
+/* Colonne gauche : photo (extensible) + rangée de stats */
+.about-media { display: flex; flex-direction: column; gap: 20px; }
+.about-photo {
+  flex: 1; min-height: 340px; overflow: hidden;
+  border-radius: var(--radius);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Colonne droite : texte puis badge poussé en bas */
+.about-text { display: flex; flex-direction: column; }
+.about-text p:last-of-type { margin-bottom: 0; }
 .about-subtitle {
   color: var(--primary-bright); font-weight: 700; font-size: 0.9rem;
   margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1.5px;
 }
 .about-text p { color: var(--text-on-dark); margin-bottom: 16px; font-size: 0.92rem; line-height: 1.8; }
-.about-stats { display: flex; flex-direction: column; gap: 20px; }
+
+.about-certification {
+  margin-top: auto; padding-top: 28px;
+  display: flex; align-items: center; gap: 16px;
+}
+.about-certification img { height: 56px; width: auto; flex-shrink: 0; }
+.about-certification-label {
+  font-size: 0.78rem; color: var(--text-on-dark); opacity: 0.7; line-height: 1.4;
+}
+
+.about-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .stat {
   background: rgba(232, 101, 10, 0.05); border: 1px solid rgba(232, 101, 10, 0.12);
-  border-radius: var(--radius); padding: 24px; text-align: center;
+  border-radius: var(--radius); padding: 20px 10px; text-align: center;
   transition: border-color 0.3s, background 0.3s;
 }
+.stat-number { word-break: break-word; }
 .stat:hover {
   border-color: rgba(232, 101, 10, 0.25);
   background: rgba(232, 101, 10, 0.08);
@@ -895,9 +918,9 @@ body {
   }
   .nav-arrow { display: none; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-stats { flex-direction: row; flex-wrap: wrap; }
-  .stat { flex: 1; min-width: 120px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo { min-height: 280px; }
+  .about-certification { margin-top: 8px; }
 
   .section { padding: 72px 0; }
   .section-title { font-size: 2rem; }
