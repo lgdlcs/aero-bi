@@ -1,0 +1,32 @@
+name: Déploiement OVH (FTP)
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Déploiement FTP vers OVH
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          # Hébergement mutualisé OVH : la racine web est généralement /www/
+          server-dir: /www/
+          # Fichiers à ne pas envoyer sur le serveur web
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/.nojekyll
+            **/CNAME
+            **/README.md
+            **/planning-template.csv
